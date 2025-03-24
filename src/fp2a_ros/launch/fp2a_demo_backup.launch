@@ -1,0 +1,21 @@
+<launch>
+  <!-- Launch ur_robot_driver -->
+  <arg name="robot_ip" default="172.20.172.102" />
+  <arg name="kinematics_config" default="/home/marco/robotic_sorting/src/Universal_Robots_ROS_Driver/ur_robot_driver/config/my_robot_calibration.yaml" />
+  <include file="$(find ur_robot_driver)/launch/ur5_bringup.launch">
+    <arg name="robot_ip" value="$(arg robot_ip)" />
+    <arg name="kinematics_config" value="$(arg kinematics_config)" />
+  </include>
+
+  <!-- Launch realsense2_camera -->
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <arg name="align_depth" value="true" />
+  </include>
+
+  <!-- Launch learning_joy -->
+  <include file="$(find learning_joy)/launch/ur_joy.launch" />
+
+  <!-- Run peract_demo_interface.py -->
+  <node name="peract_demo_interface" pkg="fp2a_ros" type="peract_demo_interface.py" output="screen" />
+
+</launch>

@@ -1,0 +1,18 @@
+parameters:
+  eye_on_hand: false
+  freehand_robot_movement: false
+  move_group: manipulator
+  move_group_namespace: /
+  namespace: /ur5_realsense_handeyecalibration_eye_on_base/
+  robot_base_frame: base
+  robot_effector_frame: tool0
+  tracking_base_frame: camera_color_optical_frame
+  tracking_marker_frame: camera_marker
+transformation:
+  qw: 0.2712628643223947
+  qx: -0.8859321614801542
+  qy: 0.3604346170872312
+  qz: -0.10783112027561025
+  x: -0.628856006413503
+  y: -0.6854251973936485
+  z: 0.7121310500407287

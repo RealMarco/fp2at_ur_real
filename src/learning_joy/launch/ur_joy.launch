@@ -1,0 +1,23 @@
+<launch>
+ 
+ <!-- 启动手柄节点joy node -->
+  <node respawn="true" pkg="joy"
+        type="joy_node" name="joy_node" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+  </node>
+
+
+<!-- 启动ur -->
+<!--规定每个按键的功能-->
+  <node respawn="true" pkg="learning_joy"
+        type="joy_get.py" name="joy_get" >
+  </node>
+<!-- 定义按键的状态变化，并持续发送指令 10 hz -->
+  <node respawn="true" pkg="learning_joy"
+        type="urJoy" name="urJoy" >
+  </node>
+  <node respawn="true" pkg="learning_joy"
+        type="ur_joy_controlnew.py" name="joy_control" >
+  </node>
+</launch>

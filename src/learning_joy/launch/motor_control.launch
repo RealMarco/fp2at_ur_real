@@ -1,0 +1,18 @@
+<launch>
+
+ <!-- joy node -->
+  <node respawn="true" pkg="joy"
+        type="joy_node" name="turtle_joy" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+  </node>
+
+  <!-- 电机控制柜启动 -->
+  <node respawn="true" pkg="learning_joy" 
+        type="teleop_pub" name="teleop_pub" >
+  </node>
+<!-- Axes -->
+  <node respawn="true" pkg="learning_joy" 
+        type="control_improve" name="control_improve" >
+  </node>
+</launch>

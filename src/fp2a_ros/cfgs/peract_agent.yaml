@@ -1,0 +1,78 @@
+settings:
+  ask_to_execute: True # useless
+  re_act_before_exec: False # useless
+
+ros:
+  loop_rate: 10 # Hz
+
+topics:
+  front_rgb:  '/camera/color/image_raw' # for RealSense  # '/mechmind/color_image' 
+  front_depth: '/camera/aligned_depth_to_color/image_raw' # for RealSense  # '/camera/depth/image_rect_raw' #  '/mechmind/depth_image'
+  front_camera_info: '/camera/color/camera_info'  # '/camera/aligned_depth_to_color/camera_info' # they are the same after align # '/mechmind/camera_info'
+
+  # To modify the topic name, Do Not change the
+  overhead_rgb: '/camera_overhead/color/image_raw'
+  overhead_depth: '/camera_overhead/aligned_depth_to_color/image_raw' # '/camera/depth/image_rect_raw' #
+  overhead_camera_info: '/camera_overhead/color/camera_info'  # '/camera_overhead/aligned_depth_to_color/camera_info' # they are the same after align 
+
+  joy_state: 'joy' #'/vive_right'
+  joy_pose: '/right_controller_as_posestamped'
+
+  joint_states: '/joint_states'
+  gripper_state: 'Robotiq2FGripperRobotInput'
+  target_pose: '/target_gripper'
+  tcp_force: '/force'
+
+  pred_voxel: '/peract_pred_voxel' # publish predicted pose
+
+agent:
+  seed_path: '/media/marco/ubuntu_data/peract/logs/Arch11_3T_pill_bottle/FUSION_PERACT_BC/seed0' # '/media/marco/ubuntu_data/peract/logs/ARCH22/ARCH22_open_pill_bottle/FUSION_PERACT_BC/seed0' # # default='/media/marco/ubuntu_data/peract/logs/ARCH22/Arch22_7T/FUSION_PERACT_BC/seed0' TODO modify for different tasks
+  weight: 232000 # 232000 # default=226570  TODO 200395 196370, 203216
+
+  episode_length: 25  #the same as RLBench tasks, TODO
+  
+  front_cam_near: 0 # operative measuring range: 0.32-6.0 for realsense455, 0.5-4.5 for kinect v2
+  front_cam_far: 1.10 #TODO 0.5-1 for Mech-eye Log S
+  overhead_cam_near: 0
+  overhead_cam_far: 0.935
+  
+  task: 'put_in_drawer' # open_pill_bottle; , 'put_in_drawer'  insert_round_hole
+  save_path: '/media/marco/ubuntu_data/RVT3_real_data_replay/real_test'
+  variation: 0
+  episode: 1 # change for the next one
+  random_seed: 0
+
+  # ---------for RLBench---------
+  
+  # camera_resolution: [640, 480]
+  # scene_bounds: [-0.64,-0.72,-0.04,0.12,0.04,0.72] 
+
+  # rotation_resolution: 5
+  # voxel_sizes: [100]
+  # num_latents: 1024
+  # latent_dim: 512
+
+  # voxel_patch_size: 5
+  # voxel_patch_stride: 5
+
+  # lang_fusion_type: 'concat'
+  
+  # TODO why not use camera near and far
+
+frame:
+  base: 'base'
+  end_effector: 'tool0'
+  front_camera: 'camera_color_optical_frame'
+  overhead_camera: 'camera_overhead_color_optical_frame'
+  
+logs:
+  save: False
+  log_path: '/media/marco/ubuntu_data/RVT3_real_data/execution_logs'
+
+  episode_id: 0 # for test
+
+
+  # save_all_frames: False  # for RLBench
+  # save_all_folder: 'ood_small_handsan'
+  
+

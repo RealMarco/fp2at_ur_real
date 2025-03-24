@@ -1,0 +1,8 @@
+<launch>
+  <!-- Launch learning_joy -->
+  <include file="$(find learning_joy)/launch/ur_joy.launch" />
+
+  <!-- Run peract_demo_interface.py -->
+  <node name="peract_demo_interface" pkg="fp2a_ros" type="peract_demo_interface.py" output="screen" />
+
+</launch>
