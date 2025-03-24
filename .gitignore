@@ -1,0 +1,15 @@
+devel/
+logs/
+build/
+**/outputs/
+.catkin_tools/
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.pyc
+**/.vscode/
+**/.history/
+*/*/.vscode/
+*/*/.history/
+src/mecheye_ros_interface/
+src/fp2a_ros/execution_logs
