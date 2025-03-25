@@ -18,6 +18,9 @@ If you are using this Robotic Grasping Simulation code, please add the following
 
 ```
 
+![Examples](3x.gif)
+
+
 Hardware: UR5, realsense camera, robotiq gripper (or RobustMotion)
 Software: RLBench
 ## References 
