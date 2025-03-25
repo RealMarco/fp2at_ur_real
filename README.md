@@ -5,6 +5,19 @@ This is the code for deploy FP2AT on ROS machine. Including data collection, and
 **Author**: [Marco Yangjun Liu](https://github.com/RealMarco/),  
 **Affiliation**:  Centre for Artificial Intelligence and Robotics, University of Macau; Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences
 
+## Citation
+If you are using this Robotic Grasping Simulation code, please add the following citation to your publication:
+```
+@ARTICLE{10874177,
+  author={Liu, Yangjun and Liu, Sheng and Chen, Binghan and Yang, Zhi-Xin and Xu, Sheng},
+  journal={IEEE Transactions on Robotics}, 
+  title={Fusion-Perception-to-Action Transformer: Enhancing Robotic Manipulation With 3-D Visual Fusion Attention and Proprioception}, 
+  year={2025},
+  volume={41},
+  pages={1553-1567},
+
+```
+
 Hardware: UR5, realsense camera, robotiq gripper (or RobustMotion)
 Software: RLBench
 ## References 
@@ -327,17 +340,4 @@ Index	Axis name on the actual controller
 5	RT
 6	cross key left/right
 7	cross key up/down
-```
-
-## Citation
-If you are using this Robotic Grasping Simulation code, please add the following citation to your publication:
-```
-@ARTICLE{10874177,
-  author={Liu, Yangjun and Liu, Sheng and Chen, Binghan and Yang, Zhi-Xin and Xu, Sheng},
-  journal={IEEE Transactions on Robotics}, 
-  title={Fusion-Perception-to-Action Transformer: Enhancing Robotic Manipulation With 3-D Visual Fusion Attention and Proprioception}, 
-  year={2025},
-  volume={41},
-  pages={1553-1567},
-
 ```
