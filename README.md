@@ -1,6 +1,6 @@
 # Real Robot Implementation of FP2AT
 
-This is the code for deploy FP2AT on ROS machine. Including data collection, and robot experiments for UR robots.
+This is the code for deploy FP2AT, PerAct, Act3D on ROS machine. Including data collection, and robot experiments for UR robots.
 
 **Author**: [Marco Yangjun Liu](https://github.com/RealMarco/),  
 **Affiliation**:  Centre for Artificial Intelligence and Robotics, University of Macau; Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences
