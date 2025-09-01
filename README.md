@@ -6,7 +6,7 @@ This is the code for deploy [Fusion-Perception-to-Action Transformer](https://ie
 **Affiliation**:  Centre for Artificial Intelligence and Robotics, University of Macau; Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences
 
 ## Citation
-If you are using this Robotic Grasping Simulation code, please add the following citation to your publication:
+If you are using this code, please add the following citation to your publication:
 ```
 @ARTICLE{10874177,
   author={Liu, Yangjun and Liu, Sheng and Chen, Binghan and Yang, Zhi-Xin and Xu, Sheng},
